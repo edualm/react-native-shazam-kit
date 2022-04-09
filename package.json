@@ -1,5 +1,5 @@
 {
-  "name": "react-native-shazam-kit",
+  "name": "@edualm/react-native-shazam-kit",
   "version": "0.1.0",
   "description": "ShazamKit (iOS) for React Native.",
   "main": "lib/commonjs/index",
