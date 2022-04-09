@@ -52,7 +52,7 @@ class ShazamKit: NSObject {
     }
     
     @objc(stop:withResolver:withRejecter:)
-    func stop(empty: String, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) -> Bool {
+    func stop(empty: String, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         self.resolveBlock = nil
         self.rejectBlock = nil
         
