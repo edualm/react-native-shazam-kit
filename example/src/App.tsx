@@ -1,18 +1,30 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-shazam-kit';
+import { StyleSheet, View, Text, Image } from 'react-native';
+import { listen, MediaInfo } from 'react-native-shazam-kit';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<MediaInfo | undefined>();
+  const [error, setError] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    listen().then(media => {
+      setResult(media);
+    }).catch(e => {
+      setError(e.message);
+    });
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      { result && (
+        <>
+          <Image source={{ uri: result.artworkURL }} style={{ width: 256, height: 256 }} />
+          <Text>Title: {result.title}</Text>
+          <Text>Artist: {result.artist}</Text>
+        </>
+      ) }
+      { error && <Text>Error: {error}</Text> }
     </View>
   );
 }

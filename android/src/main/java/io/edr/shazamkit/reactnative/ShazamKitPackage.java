@@ -1,4 +1,4 @@
-package com.reactnativeshazamkit;
+package io.edr.shazamkit.reactnative;
 
 import androidx.annotation.NonNull;
 

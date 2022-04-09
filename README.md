@@ -1,6 +1,8 @@
 # react-native-shazam-kit
 
-ShazamKit (iOS) for React Native.
+Use ShazamKit for song recognition from within React Native.
+
+This module is only supported on iOS. Using it in Android will not crash your app - you can easily check for support using the `isSupported()` method.
 
 ## Installation
 
@@ -11,16 +13,14 @@ npm install react-native-shazam-kit
 ## Usage
 
 ```js
-import { multiply } from "react-native-shazam-kit";
+import ShazamKit from "react-native-shazam-kit";
 
 // ...
 
-const result = await multiply(3, 7);
+if (await ShazamKit.isSupported()) {
+    const result = await ShazamKit.listen();
+}
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
 
