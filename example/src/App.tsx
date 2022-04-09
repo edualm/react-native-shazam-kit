@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text, Image } from 'react-native';
-import { listen, MediaInfo } from 'react-native-shazam-kit';
+import ShazamKit, { MediaInfo } from 'react-native-shazam-kit';
 
 export default function App() {
   const [result, setResult] = React.useState<MediaInfo | undefined>();
   const [error, setError] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    listen().then(media => {
+    ShazamKit.listen().then(media => {
       setResult(media);
     }).catch(e => {
       setError(e.message);

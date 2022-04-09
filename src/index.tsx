@@ -32,16 +32,18 @@ const ShazamKit = NativeModules.ShazamKit
       }
     );
 
-export function isSupported(): Promise<boolean> {
+async function isSupported(): Promise<boolean> {
   return ShazamKit.isSupported("");
 }
 
-export function stop(): Promise<boolean> {
+async function stop(): Promise<boolean> {
   return ShazamKit.stop("");
 }
 
-export async function listen(): Promise<MediaInfo> {
+async function listen(): Promise<MediaInfo> {
   const result = await ShazamKit.listen("");
 
   return JSON.parse(result);
 }
+
+export default { isSupported, stop, listen };
