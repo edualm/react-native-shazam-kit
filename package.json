@@ -1,6 +1,6 @@
 {
   "name": "@edualm/react-native-shazam-kit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "ShazamKit (iOS) for React Native.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/edualm/react-native-shazamkit",
+  "repository": "https://github.com/edualm/react-native-shazam-kit",
   "author": "Eduardo Almeida <me@edr.io> (https://edr.io)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/edualm/react-native-shazamkit/issues"
+    "url": "https://github.com/edualm/react-native-shazam-kit/issues"
   },
-  "homepage": "https://github.com/edualm/react-native-shazamkit#readme",
+  "homepage": "https://github.com/edualm/react-native-shazam-kit#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
